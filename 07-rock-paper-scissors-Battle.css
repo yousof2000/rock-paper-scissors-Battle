@@ -1,0 +1,230 @@
+  :root {
+            --background-color: #f0f2f5;
+            --main-container-bg: #f0f2f5;
+            --text-color: #34495e;
+            --heading-color: #007bff;
+            --rock-btn-color: #e74c3c;
+            --paper-btn-color: #3498db;
+            --scissors-btn-color: #2ecc71;
+            --reset-btn-color: #95a5a6;
+            --button-text-color: #34495e;
+            --shadow-light: #ffffff;
+            --shadow-dark: #c8d0e7;
+            --win-color: #28a745;
+            --lose-color: #dc3545;
+            --tie-color: #ffc107;
+        }
+
+
+        body {
+            background-color: var(--background-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: var(--text-color);
+            transition: background-color 0.5s;
+        }
+
+        .game-layout {
+            display: flex;
+            gap: 40px;
+            background-color: var(--main-container-bg);
+            border-radius: 30px;
+            box-shadow: 10px 10px 30px var(--shadow-dark),
+                -10px -10px 30px var(--shadow-light);
+            padding: 40px;
+            max-width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .game-controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-right: 40px;
+            border-right: 1px solid var(--shadow-dark);
+            min-width: 250px;
+        }
+
+        .buttons-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 15px;
+        }
+
+
+        .game-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 300px;
+            padding-left: 20px;
+            background-color: var(--background-color);
+            border-radius: 20px;
+            box-shadow: inset 5px 5px 15px var(--shadow-dark),
+                inset -5px -5px 15px var(--shadow-light);
+        }
+
+        .info-title {
+            font-size: 24px;
+            color: var(--heading-color);
+            font-weight: 800;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+        }
+
+        .game-title {
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 40px;
+            color: var(--heading-color);
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .result-box {
+            font-size: 24px;
+            font-weight: 800;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 10px;
+            color: var(--text-color);
+            border: 2px solid var(--shadow-light);
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+
+            text-align: center;
+            min-height: 2.5em;
+            min-width: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .moves-box {
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            padding: 5px 15px;
+            color: #7f8c8d;
+            text-align: center;
+            min-height: 20px;
+        }
+
+        .score-box {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 10px 0 20px 0;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background: var(--main-container-bg);
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1),
+                -4px -4px 10px var(--shadow-light);
+            color: var(--text-color);
+        }
+
+        /* BUTTONS STYLES */
+
+        .buttons-row button {
+            padding: 25px 45px;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 15px;
+            margin: 0 15px;
+            color: var(--button-text-color);
+            border: none;
+            background: var(--main-container-bg);
+            box-shadow: 6px 6px 12px var(--shadow-dark),
+                -6px -6px 12px var(--shadow-light);
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+
+        .buttons-row button:nth-child(1) {
+            color: var(--rock-btn-color);
+        }
+
+        .buttons-row button:nth-child(2) {
+            color: var(--paper-btn-color);
+        }
+
+        .buttons-row button:nth-child(3) {
+            color: var(--scissors-btn-color);
+        }
+
+
+        .buttons-row button:hover {
+            opacity: 0.9;
+            transform: scale(1.01);
+        }
+
+        .buttons-row button:active {
+            box-shadow: inset 4px 4px 8px var(--shadow-dark),
+                inset -4px -4px 8px var(--shadow-light);
+            transform: scale(0.95);
+            color: var(--heading-color);
+        }
+
+        .buttons-row button:focus {
+            box-shadow: inset 4px 4px 8px var(--shadow-dark),
+                inset -4px -4px 8px var(--shadow-light);
+        }
+
+        .reset-button {
+            background-color: var(--reset-btn-color);
+            color: white;
+            font-weight: 600;
+            padding: 10px 25px;
+            font-size: 16px;
+            border-radius: 20px;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            border: none;
+            box-shadow: 4px 4px 8px var(--shadow-dark),
+                -4px -4px 8px var(--shadow-light);
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        .reset-button:hover {
+            background-color: #839192;
+            transform: scale(1.02);
+        }
+
+        .reset-button:active {
+            background-color: #707b7c;
+            box-shadow: inset 3px 3px 6px var(--shadow-dark),
+                inset -3px -3px 6px var(--shadow-light);
+            transform: scale(0.98);
+        }
+
+        
+
+        @media (max-width: 768px) {
+            
+            .game-layout {
+                flex-direction: column;
+                gap: 20px;
+                align-content: center;
+            }
+
+            .game-controls {
+                padding-right: 0;
+                border-right: none;
+                border-bottom: 1px solid var(--shadow-dark);;
+            }
+
+            .game-info {
+                padding: 20px;
+            }
+
+        }
