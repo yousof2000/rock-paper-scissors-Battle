@@ -1,7 +1,14 @@
 # Rock-Paper-Scissors Game
 
 ## Description
-A small interactive game where the player chooses rock, paper, or scissors, and the computer randomly chooses its move. The game displays the result and keeps track of wins, losses, and ties.
+A small interactive game where the player chooses rock, paper, or scissors and competes against a computer-generated choice. The game provides instant feedback and keeps track of wins, losses, and ties.
+
+## Features
+- Player selects rock, paper, or scissors.
+- Random computer-generated choice.
+- Win, loss, and tie detection.
+- Score tracking for wins, losses, and ties.
+- Reset button to clear scores and start a new game.
 
 ## Technologies Used
 - HTML
